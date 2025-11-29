@@ -1,0 +1,192 @@
+version: '3.8'
+
+# QuantumClip Docker Compose Configuration
+# 
+# Services:
+# - db: PostgreSQL database (port 5432)
+# - redis: Redis for Celery task queue (port 6379)
+# - backend: FastAPI backend server (port 8000)
+# - celery_worker: Celery worker for background video generation tasks
+# - celery_beat: Celery beat scheduler for periodic tasks
+# - frontend: React frontend (port 3000)
+# - nginx: Reverse proxy for production (ports 80, 443) - only with --profile production
+
+services:
+  # PostgreSQL Database
+  # Provides persistent storage for users, videos, and application data
+  db:
+    image: postgres:16-alpine
+    container_name: shazi_db
+    environment:
+      POSTGRES_USER: shazi
+      POSTGRES_PASSWORD: shazi_password
+      POSTGRES_DB: shazi_videogen
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      # Check if PostgreSQL is ready to accept connections
+      test: ["CMD-SHELL", "pg_isready -U shazi"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s  # Give PostgreSQL time to initialize
+
+  # Redis for Celery
+  # Provides message broker for Celery task queue
+  redis:
+    image: redis:7-alpine
+    container_name: shazi_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      # Check if Redis is responding to PING
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s  # Redis starts quickly
+
+  # FastAPI Backend
+  # Main application server running on port 8000
+  # Command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+  # Health endpoint: GET /health (returns {"status": "healthy", ...})
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: shazi_backend
+    # Start uvicorn with reload for development (auto-restart on code changes)
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./backend:/app
+      - ./uploads:/app/uploads
+      - ./music:/app/music
+      - ./font:/app/font
+      - ./overlays:/app/overlays
+      - ./style_previews:/app/style_previews
+    ports:
+      - "8000:8000"  # Map container port 8000 to host port 8000
+    env_file:
+      - ./backend/.env
+    depends_on:
+      # Wait for database and Redis to be healthy before starting
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      # Check if backend is responding to health endpoint
+      # Uses /health endpoint which returns {"status": "healthy", ...}
+      # start_period gives the app time to initialize (database, imports, etc.)
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10  # Retry up to 10 times (100s total) before marking unhealthy
+      start_period: 60s  # Allow 60s for initial startup (heavy imports like MoviePy)
+
+  # Celery Worker
+  # Processes background video generation tasks from Redis queue
+  # Command: celery -A app.tasks.celery_app worker --loglevel=info --concurrency=2
+  celery_worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: shazi_celery_worker
+    command: celery -A app.tasks.celery_app worker --loglevel=info --concurrency=2
+    volumes:
+      - ./backend:/app
+      - ./uploads:/app/uploads
+      - ./music:/app/music
+      - ./font:/app/font
+      - ./overlays:/app/overlays
+    env_file:
+      - ./backend/.env
+    depends_on:
+      # Wait for dependencies to be healthy before starting
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+      backend:
+        condition: service_healthy  # Wait for backend to be ready (ensures DB migrations, etc.)
+    restart: unless-stopped
+
+  # Celery Beat (for scheduled tasks)
+  # Schedules periodic tasks (if any)
+  # Command: celery -A app.tasks.celery_app beat --loglevel=info
+  celery_beat:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: shazi_celery_beat
+    command: celery -A app.tasks.celery_app beat --loglevel=info
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    depends_on:
+      # Wait for dependencies to be healthy
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # React Frontend
+  # Vite development server on port 3000
+  # Waits for backend to be healthy before starting
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: shazi_frontend
+    ports:
+      - "3000:3000"  # Map container port 3000 to host port 3000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  # Prevent overwriting node_modules in container
+    environment:
+      - VITE_API_URL=http://localhost:8000
+      - VITE_WS_URL=ws://localhost:8000
+    depends_on:
+      # Wait for backend to be healthy (not just started) before starting frontend
+      # This ensures backend API is actually reachable
+      backend:
+        condition: service_healthy
+    stdin_open: true
+    tty: true
+
+  # Nginx Reverse Proxy (Production)
+  # Only starts with: docker-compose --profile production up
+  # Routes traffic to backend and frontend services
+  nginx:
+    image: nginx:alpine
+    container_name: shazi_nginx
+    ports:
+      - "80:80"   # HTTP
+      - "443:443" # HTTPS
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      # Wait for both services to be healthy
+      backend:
+        condition: service_healthy
+      frontend:
+        condition: service_started  # Frontend doesn't have healthcheck, so use started
+    restart: unless-stopped
+    profiles:
+      - production
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  default:
+    name: shazi_network
+

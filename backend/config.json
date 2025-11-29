@@ -1,0 +1,243 @@
+{
+    "story_generation": {
+        "char_limit_min": 600,
+        "char_limit_max": 700
+    },
+    "storyboard": {
+        "max_scenes": null,
+        "target_words_per_scene": 80,
+        "min_words_per_scene": 45,
+        "max_sentences_per_scene": 4,
+        "manual_scene_break_marker": "[SCENE_BREAK]"
+    },
+    "openai": {
+        "model": "llama-3.1-8b-instant",
+        "temperature": 0.9
+    },
+    "groq": {
+        "model": "llama-3.1-8b-instant",
+        "temperature": 0.9
+    },
+    "gemini": {
+        "model": "gemini-1.5-flash",
+        "temperature": 0.9
+    },
+    "replicate_flux_api": {
+        "model": "black-forest-labs/flux-schnell",
+        "aspect_ratio": {
+            "portrait": "9:16",
+            "landscape": "16:9"
+        },
+        "num_inference_steps": 4,
+        "disable_safety_checker": false,
+        "guidance": 3.0,
+        "output_quality": 100
+    },
+    "fal_flux_api": {
+        "model": "fal-ai/flux/schnell",
+        "image_size": {
+            "portrait": "portrait_16_9",
+            "landscape": "landscape_16_9"
+        },
+        "num_inference_steps": 4,
+        "guidance_scale": 3.5,
+        "enable_safety_checker": false,
+        "num_images": 1
+    },
+    "together_flux_api": {
+        "model": "black-forest-labs/FLUX.1-schnell-Free",
+        "dimensions": {
+            "portrait": {
+                "width": 768,
+                "height": 1408
+            },
+            "landscape": {
+                "width": 1408,
+                "height": 768
+            }
+        },
+        "steps": 4
+    },
+    "runware_flux_api": {
+        "api_key": "",
+        "models": {
+            "flux_dev": {
+                "name": "Flux Dev",
+                "model_id": "runware:101@1",
+                "steps": 28
+            },
+            "flex_schenele": {
+                "name": "Flex Schenele",
+                "model_id": "runware:100@1",
+                "steps": 4
+            },
+            "juggernaut_lightning": {
+                "name": "Juggernaut Lightning Flux",
+                "model_id": "rundiffusion:110@101",
+                "steps": 5
+            },
+            "hidream_i1_fast": {
+                "name": "HiDream-i1 Fast",
+                "model_id": "runware:97@3",
+                "steps": 4
+            },
+            "hidream_i1_dev": {
+                "name": "HiDream-i1 Dev",
+                "model_id": "runware:97@2",
+                "steps": 28
+            }
+        },
+        "dimensions": {
+            "portrait": {
+                "width": 768,
+                "height": 1344
+            },
+            "landscape": {
+                "width": 1344,
+                "height": 768
+            }
+        },
+        "steps": 20,
+        "negative_prompt": "text, words, letters, writing, captions, labels, watermark, signature, logo, title, subtitle, timestamp",
+        "guidance_scale": 7.5,
+        "num_images": 1,
+        "output_format": "PNG"
+    },
+    "video_resolutions": {
+        "720p": {
+            "portrait": {
+                "width": 720,
+                "height": 1280
+            },
+            "landscape": {
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "1080p": {
+            "portrait": {
+                "width": 1080,
+                "height": 1920
+            },
+            "landscape": {
+                "width": 1920,
+                "height": 1080
+            }
+        },
+        "2K": {
+            "portrait": {
+                "width": 1440,
+                "height": 2560
+            },
+            "landscape": {
+                "width": 2560,
+                "height": 1440
+            }
+        },
+        "4K": {
+            "portrait": {
+                "width": 2160,
+                "height": 3840
+            },
+            "landscape": {
+                "width": 3840,
+                "height": 2160
+            }
+        }
+    },
+    "tts": {
+        "speech_rate": 0.989795918367347
+    },
+    "elevenlabs": {
+        "model": "eleven_turbo_v2_5",
+        "available_models": [
+            {
+                "id": "eleven_multilingual_v2",
+                "name": "Eleven Multilingual v2",
+                "description": "Best for most use cases. Supports 29 languages with excellent stability and accent accuracy."
+            },
+            {
+                "id": "eleven_turbo_v2_5",
+                "name": "Eleven Turbo v2.5",
+                "description": "Fastest model with high quality. Ideal for real-time applications. Supports 32 languages."
+            },
+            {
+                "id": "eleven_monolingual_v1",
+                "name": "Eleven Monolingual v1",
+                "description": "English-only model optimized for quality and performance."
+            },
+            {
+                "id": "eleven_english_v2",
+                "name": "Eleven English v2",
+                "description": "Enhanced English-only model with improved quality."
+            }
+        ],
+        "voice_settings": {
+            "stability": 0.5,
+            "similarity_boost": 0.75,
+            "style": 0.0,
+            "use_speaker_boost": true
+        }
+    },
+    "fish_audio": {
+        "base_url": "https://api.fish.audio",
+        "default_voice": "default",
+        "available_models": [
+            {
+                "id": "s1",
+                "name": "Fish Speech S1",
+                "description": "High-quality speech synthesis with natural voice cloning capabilities."
+            },
+            {
+                "id": "speech-1.5",
+                "name": "Fish Speech v1.5",
+                "description": "Enhanced version with improved quality and faster generation. #2 ranked on TTS-Arena."
+            },
+            {
+                "id": "speech-1.6",
+                "name": "Fish Speech v1.6",
+                "description": "Latest model with best quality, multilingual support and enhanced voice cloning."
+            }
+        ],
+        "voice_settings": {
+            "stability": 0.5,
+            "similarity": 0.75,
+            "style": 0.0,
+            "speaker_boost": true
+        }
+    },
+    "ui_theme": "Dark",
+    "default_ai_provider": "Groq",
+    "generation_timeouts": {
+        "individual_image_timeout": 80,
+        "individual_audio_timeout": 120
+    },
+    "custom_styles": {
+        "Marcus Aurelius": {
+            "description": "Ultra-realistic portrait of a Roman emperor, modeled in the style of a classical marble bust, inspired by the likeness of Marcus Aurelius. The subject has a full, curly beard and voluminous curly hair, intricately detailed with sculptural precision. His expression is calm, stoic, and deeply contemplative, with slightly shadowed eyes that convey philosophical depth. Skin has a smooth, stone-like texture with subtle weathering and fine chisel marks, evoking aged marble. Lighting is soft, museum-style, with directional shadows that highlight the sharp contours of the face and hair. The background is solid gray, minimal and neutral \u2014 like a gallery or museum display. He is dressed in a Roman military cloak and toga, draped accurately over one shoulder with a fibula clasp. The overall composition appears as if a lifelike marble bust has been photographed in high detail \u2014 blending classical sculpture aesthetics with hyper-realistic presentation.",
+            "created_at": "2025-08-13 23:26:53"
+        },
+        "Itachi Path": {
+            "description": "The channel will use a minimalist anime-stick hybrid style, where characters are drawn as faceless stick-figure silhouettes with slightly elongated limbs outlined in bold black ink strokes. Instead of detailed faces, emotions are expressed through glowing auras and color symbolism: grey/black haze for autopilot and comfort, deep blue tones for doubt and sadness, muted purples for inner conflict, and bright golden or orange glows for breakthroughs, growth, and hope. Backgrounds will feature soft watercolor gradients and simple symbolic landscapes\u2014chains, doors, stairways, cages, and glowing paths\u2014always in the same sketchy, anime-inspired aesthetic. This creates a cinematic yet universal look, where every viewer can project themselves onto the faceless figures, making the visuals timeless, emotionally powerful, and consistent across the whole channel.",
+            "created_at": "2025-08-19 19:20:23"
+        },
+        "MonoSoul Aesthetic": {
+            "description": "A minimalist black-and-white anime stick-figure style where the background is deep matte black, and all characters, icons, and objects are drawn in clean, glowing white lines with soft edges. The figures are expressive despite their simplicity, using exaggerated poses and subtle light accents to convey emotion and motivation. The overall look feels modern, bold, and high-contrast\u2014perfect for faceless storytelling, self-help, and motivational content that keeps the focus on the message while maintaining a visually striking and consistent aesthetic.\n\n\"Minimalist black-and-white anime stick-figure illustration in MonoSoul Aesthetic. Background is solid deep matte black. Characters, objects, and icons are drawn in glowing white line art with soft edges. High contrast, expressive poses, simple shapes, and emotional gestures. Clean, modern, faceless, motivational vibe. Perfect for self-help and inspirational storytelling.\"\n\n\ud83d\udc49 For every new scene, just replace the subject/scene details like this:\n\n\u201c\u2026showing a stick figure climbing a mountain\u201d\n\n\u201c\u2026a stick figure reading a glowing book of wisdom\u201d\n\n\u201c\u2026two stick figures shaking hands to symbolize teamwork\u201d\n\nThis way, your style stays consistent across all videos.",
+            "created_at": "2025-08-19 19:35:47"
+        },
+        "Noir Romance Realism": {
+            "description": "\u201cNoir Romance Realism\u201d is a cinematic visual style combining the dark, moody aesthetics of film noir with the soft emotional tones of romance. It is photo-realistic with artistic dramatization, designed to create emotional immersion for storytelling.\n\nMood & Atmosphere:\n\nDark, mysterious, and suspenseful with deep shadows and soft glowing highlights.\n\nEvokes feelings of danger, secrecy, and passion.\n\nOften night scenes, rain-soaked streets, glowing neon, candlelight, or dim interiors.\n\nColor Palette:\n\nDeep blacks, greys, and muted tones.\n\nCrimson reds (symbolizing both love and blood).\n\nOccasional soft pinks, gold, or violet for romantic contrast.\n\nCharacters:\n\nSilhouettes or semi-obscured faces (to keep it faceless).\n\nBody language conveys emotion (a touch, a stare, distance, or conflict).\n\nOutfits: classy, timeless \u2014 trench coats, dresses, suits, leather jackets.\n\nComposition:\n\nCinematic framing (like a movie still).\n\nHigh contrast lighting (neon glow, candlelight, streetlamps, moonlight).\n\nSubtle visual storytelling props (rose, letter, gun, wine glass, crime scene tape).\n\nConsistency Rule:\n\nEvery image must look like a frame from a romantic crime movie, not stock photos.\n\nUse soft cinematic grain for authenticity.\n\nKeep text out of images \u2014 pure visuals for narration overlay.\n\nExample Prompt (for LLM \u2192 AI image tool):\nCinematic photo-realistic scene in Noir Romance Realism style. \nA rainy city street at night, glowing neon lights reflecting on wet pavement. \nIn the foreground, a man and woman stand close but facing opposite directions \u2014 \ntheir faces hidden in shadow, body language full of tension and longing. \nThe man holds a cigarette glowing faintly red, the woman clutches a red rose. \nSoft rain falls under a streetlamp, creating dramatic reflections. \nDark, moody, and mysterious atmosphere with romantic tension. \nColors: deep blacks, muted greys, crimson red accents, soft glowing highlights. \nCinematic movie still look, slightly grainy texture, professional noir realism. \nNo text, no watermarks.",
+            "created_at": "2025-08-30 13:49:32"
+        },
+        "NeoMind Vision": {
+            "description": "NeoMind Vision is a fusion art style combining:\n\n3D Depth \u2192 Characters and environments look immersive with subtle shadows and light reflections.\n\nAnime Expressionism \u2192 Clean lines, bold emotions, and exaggerated poses to show intensity and motivation.\n\nStick-Figure Minimalism \u2192 Simplified human outlines blended into the design, representing universality \u2014 anyone can see themselves in the image.\n\nThis blend creates a modern, futuristic, and symbolic look that feels inspiring but not overly cartoonish. Perfect for motivational themes.\n\n\ud83d\udd39 Color Palette:\n\nPrimary Energy Colors \u2192\n\nDeep Indigo (#2A2A72) \u2192 represents knowledge & self-growth\n\nElectric Cyan (#00F7FF) \u2192 futuristic, energetic, uplifting\n\nVibrant Orange (#FF6B35) \u2192 drive, motivation, fire within\n\nSecondary Calm Colors \u2192\n\nSoft White (#F5F5F5) \u2192 balance, clarity\n\nGraphite Gray (#2E2E2E) \u2192 grounding, seriousness\n\n\u2728 Effect: Bright motivational contrast \u2192 glowing accents (cyan/orange) on dark backgrounds with hints of anime-style gradients.\n\n\ud83d\udd39 Visual Mood:\n\nCharacters: Half stylized like 3D anime heroes, half simplified like stick-figures, representing \u201cordinary people transforming into extraordinary.\u201d\n\nBackgrounds: Minimal, abstract geometric shapes with glowing highlights.\n\nMotion Feel: Images should feel like they\u2019re \u201cemerging out of light\u201d \u2192 a metaphor for self-improvement.\n\nExample Prompt: Create an inspirational scene in NeoMind Vision style: a simplified stick-figure character standing on a mountain peak, glowing with electric cyan and vibrant orange energy, shaded with soft 3D depth, anime-style facial expression of determination, abstract dark indigo background with light rays breaking through.",
+            "created_at": "2025-08-31 21:51:18"
+        }
+    },
+    "render_workers": 5,
+    "render_mode": "parallel",
+    "edge_tts": {
+        "pitch_percent": -3,
+        "volume_percent": 100
+    }
+}

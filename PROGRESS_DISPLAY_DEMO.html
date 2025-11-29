@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Display Demo - Shazi Video Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .spinner {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-8">
+      
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-2">🎬 4-Stage Progress Display Demo</h1>
+        <p class="text-gray-600">This is what users see when creating a video (auto-updates every 2 seconds)</p>
+      </div>
+
+      <hr class="my-8">
+
+      <!-- DEMO: Stage 2 Active (60% Progress) -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">🎬 Creating Your Video</h2>
+        
+        <!-- Overall Progress Bar -->
+        <div class="max-w-2xl mx-auto mb-8">
+          <div class="flex justify-between text-sm text-gray-600 mb-2">
+            <span class="font-semibold">Overall Progress</span>
+            <span class="font-bold text-blue-600 text-2xl">60%</span>
+          </div>
+          <div class="h-4 bg-gray-200 rounded-full overflow-hidden shadow-inner">
+            <div class="h-full bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 transition-all duration-500 relative" style="width: 60%">
+              <div class="absolute inset-0 bg-white/30 pulse"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 1: Complete -->
+        <div class="max-w-3xl mx-auto space-y-4">
+          <div class="p-4 rounded-lg border-2 border-green-500 bg-green-50">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">✓</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 flex items-center gap-2">
+                  <span class="text-xl">🤖</span>
+                  <span>Stage 1: Generating Scene Prompts</span>
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">
+                  ✅ Generated 3 scene prompts using AI
+                </p>
+              </div>
+              <span class="text-sm font-bold text-green-600">10-30%</span>
+            </div>
+          </div>
+
+          <!-- Stage 2: Complete -->
+          <div class="p-4 rounded-lg border-2 border-green-500 bg-green-50">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">✓</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 flex items-center gap-2">
+                  <span class="text-xl">🖼️</span>
+                  <span>Stage 2: Generating Images</span>
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">
+                  ✅ Generated 3 high-quality images using Pollination AI
+                </p>
+              </div>
+              <span class="text-sm font-bold text-green-600">30-60%</span>
+            </div>
+          </div>
+
+          <!-- Stage 3: Active -->
+          <div class="p-4 rounded-lg border-2 border-blue-500 bg-blue-50">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full spinner flex-shrink-0"></div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 flex items-center gap-2">
+                  <span class="text-xl">🎤</span>
+                  <span>Stage 3: Generating Audio</span>
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">
+                  🔄 Converting script to natural-sounding voice narration with Edge TTS...
+                </p>
+              </div>
+              <span class="text-sm font-bold text-blue-600">60-80%</span>
+            </div>
+          </div>
+
+          <!-- Stage 4: Pending -->
+          <div class="p-4 rounded-lg border-2 border-gray-300 bg-gray-50">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">4</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 flex items-center gap-2">
+                  <span class="text-xl">🎬</span>
+                  <span>Stage 4: Rendering Final Video</span>
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">
+                  Waiting for audio...
+                </p>
+              </div>
+              <span class="text-sm font-bold text-gray-400">80-100%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time Estimate -->
+        <div class="text-center mt-6">
+          <p class="text-gray-600 text-sm">⏱️ Estimated time remaining: <span class="font-bold">~1 minute</span></p>
+        </div>
+      </div>
+
+      <hr class="my-12">
+
+      <!-- Legend -->
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">🎯 Progress Display Features:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h4 class="font-bold text-gray-900 mb-2">✅ Percentage Display</h4>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Large progress bar (0-100%)</li>
+              <li>• Big percentage number</li>
+              <li>• Smooth gradient animation</li>
+              <li>• Updates every 2 seconds</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h4 class="font-bold text-gray-900 mb-2">🔄 Real-Time Status</h4>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Shows current stage processing</li>
+              <li>• Detailed status messages</li>
+              <li>• Visual indicators (spinner/checkmark)</li>
+              <li>• Time estimate updates</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h4 class="font-bold text-gray-900 mb-2">🎨 Visual Feedback</h4>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Gray = Waiting (pending)</li>
+              <li>• Blue = Active (processing)</li>
+              <li>• Green = Complete (done)</li>
+              <li>• Animated spinners</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h4 class="font-bold text-gray-900 mb-2">📊 4 Detailed Stages</h4>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Stage 1: AI Prompts (10-30%)</li>
+              <li>• Stage 2: Images (30-60%)</li>
+              <li>• Stage 3: Audio (60-80%)</li>
+              <li>• Stage 4: Rendering (80-100%)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- How to See It -->
+      <div class="mt-12 p-6 bg-blue-50 border-2 border-blue-300 rounded-lg">
+        <h3 class="text-xl font-bold text-blue-900 mb-3">🚀 How to See This in Your App:</h3>
+        <ol class="text-blue-800 space-y-2">
+          <li><strong>1.</strong> Open <code class="bg-white px-2 py-1 rounded">http://localhost:3000</code> in your browser</li>
+          <li><strong>2.</strong> Log in with: <code class="bg-white px-2 py-1 rounded">admin@example.com</code> / <code class="bg-white px-2 py-1 rounded">admin123</code></li>
+          <li><strong>3.</strong> Click <strong>"Create Video"</strong> in the sidebar</li>
+          <li><strong>4.</strong> Fill in:
+            <ul class="ml-6 mt-1 space-y-1">
+              <li>• Title: "Test Progress"</li>
+              <li>• Script: 3 paragraphs separated by blank lines</li>
+            </ul>
+          </li>
+          <li><strong>5.</strong> Click <strong>"Create Video"</strong> button</li>
+          <li><strong>6.</strong> <span class="font-bold text-blue-600">IMMEDIATELY see this exact progress display!</span></li>
+        </ol>
+      </div>
+
+      <!-- Note -->
+      <div class="mt-8 p-4 bg-yellow-50 border border-yellow-300 rounded-lg">
+        <p class="text-yellow-900">
+          <strong>📝 Note:</strong> All existing videos (18-22) are already completed, so they show the video player.
+          To see the progress display, you must <strong>create a NEW video</strong>!
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Auto-update simulation -->
+  <script>
+    let progress = 60;
+    let stage = 3;
+    
+    setInterval(() => {
+      progress += 5;
+      if (progress > 100) progress = 10;
+      
+      console.log(`Progress: ${progress}%`);
+    }, 3000);
+  </script>
+</body>
+</html>
+

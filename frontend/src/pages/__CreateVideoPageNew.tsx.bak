@@ -1,0 +1,434 @@
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { FileText, Settings as SettingsIcon, Video, ArrowLeft, Music, Layers, Type, Wand2 } from 'lucide-react'
+import toast from 'react-hot-toast'
+import api from '../services/api'
+import StyleGallery from '../components/StyleGallery'
+
+interface VideoForm {
+  title: string
+  description?: string
+  script: string
+  style: string
+  resolution: string
+  orientation: string
+  backgroundMusic?: string
+  videoOverlay?: string
+  font?: string
+  customInstructions?: string
+}
+
+export default function CreateVideoPage() {
+  const navigate = useNavigate()
+  const [isLoading, setIsLoading] = useState(false)
+  const [showAdvanced, setShowAdvanced] = useState(false)
+  const [showStyleGallery, setShowStyleGallery] = useState(false)
+  
+  // Form state
+  const [formData, setFormData] = useState<VideoForm>({
+    title: '',
+    description: '',
+    script: '',
+    style: 'cinematic',
+    resolution: '1080p',
+    orientation: 'portrait',
+    backgroundMusic: '',
+    videoOverlay: '',
+    font: '',
+    customInstructions: ''
+  })
+
+  // Available options
+  const [musicFiles, setMusicFiles] = useState<string[]>([])
+  const [overlayFiles, setOverlayFiles] = useState<string[]>([])
+  const [fonts, setFonts] = useState<string[]>([])
+  const [sampleScripts, setSampleScripts] = useState<{name: string, content: string}[]>([])
+
+  // Load available options
+  useEffect(() => {
+    loadOptions()
+  }, [])
+
+  const loadOptions = async () => {
+    try {
+      const [musicRes, overlayRes, fontRes] = await Promise.all([
+        api.get('/settings/music'),
+        api.get('/settings/overlays'),
+        api.get('/settings/fonts')
+      ])
+      setMusicFiles(musicRes.data.music || [])
+      setOverlayFiles(overlayRes.data.overlays || [])
+      setFonts(fontRes.data.fonts || [])
+    } catch (error) {
+      console.error('Failed to load options:', error)
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!formData.title || !formData.script) {
+      toast.error('Please fill in title and script')
+      return
+    }
+
+    setIsLoading(true)
+    try {
+      const response = await api.post('/videos/', {
+        ...formData,
+        ai_provider: 'groq',
+        image_service: 'pollination',
+        tts_provider: 'edge'
+      })
+      toast.success('🎬 Video generation started!')
+      navigate(`/videos/${response.data.id}`)
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Failed to create video')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const loadSampleScript = (sample: string) => {
+    // Load sample scripts (these would come from API)
+    const samples: Record<string, string> = {
+      'space': 'In the beginning, humanity looked up at the stars with wonder.\n\nWe dreamed of reaching beyond our world.\n\nToday, we explore the infinite universe.',
+      'nature': 'The forest awakens with morning light.\n\nBirds sing their ancient songs.\n\nNature reminds us of simple beauty.',
+      'tech': 'Technology shapes our future.\n\nInnovation drives progress.\n\nThe digital age transforms everything.'
+    }
+    setFormData({...formData, script: samples[sample] || ''})
+    toast.success('Sample script loaded!')
+  }
+
+  return (
+    <div className="max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="mb-6 bg-gradient-to-r from-primary-50 to-blue-50 rounded-desktop p-6 shadow-sm border border-primary-200">
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => navigate('/')}
+            className="p-2 hover:bg-white/50 rounded-desktop transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5 text-primary-700" />
+          </button>
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
+              <Video className="w-8 h-8 text-primary-600" />
+              Create New Video
+            </h1>
+            <p className="text-gray-700 mt-1">Transform your script into stunning AI-powered videos</p>
+          </div>
+        </div>
+      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Video Details Section */}
+        <div className="bg-white rounded-desktop p-6 shadow-md border border-gray-200">
+          <div className="flex items-center gap-2 mb-5 pb-4 border-b border-gray-200">
+            <FileText className="w-6 h-6 text-primary-500" />
+            <h2 className="text-2xl font-bold text-gray-900">Video Details</h2>
+          </div>
+          
+          <div className="space-y-5">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Video Title <span className="text-red-500">*</span>
+              </label>
+              <input
+                value={formData.title}
+                onChange={(e) => setFormData({...formData, title: e.target.value})}
+                type="text"
+                className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-medium placeholder-gray-400"
+                placeholder="My Amazing AI Video"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Description <span className="text-gray-400">(Optional)</span>
+              </label>
+              <textarea
+                value={formData.description}
+                onChange={(e) => setFormData({...formData, description: e.target.value})}
+                className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-medium placeholder-gray-400"
+                rows={3}
+                placeholder="Brief description of your video..."
+              />
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <label className="block text-sm font-semibold text-gray-700">
+                  Video Script <span className="text-red-500">*</span>
+                </label>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => loadSampleScript('space')}
+                    className="text-xs px-3 py-1 bg-primary-50 text-primary-600 rounded-desktop hover:bg-primary-100 transition-colors font-medium"
+                  >
+                    Load Space Sample
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => loadSampleScript('nature')}
+                    className="text-xs px-3 py-1 bg-green-50 text-green-600 rounded-desktop hover:bg-green-100 transition-colors font-medium"
+                  >
+                    Load Nature Sample
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => loadSampleScript('tech')}
+                    className="text-xs px-3 py-1 bg-blue-50 text-blue-600 rounded-desktop hover:bg-blue-100 transition-colors font-medium"
+                  >
+                    Load Tech Sample
+                  </button>
+                </div>
+              </div>
+              <textarea
+                value={formData.script}
+                onChange={(e) => setFormData({...formData, script: e.target.value})}
+                className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-medium placeholder-gray-400 font-mono text-sm"
+                rows={10}
+                placeholder="Enter your video script here...
+
+Each paragraph will become a scene.
+
+You can write multiple paragraphs for multiple scenes."
+                required
+              />
+              <p className="mt-2 text-sm text-gray-600 flex items-center gap-2">
+                <span>💡</span>
+                <strong>Tip:</strong> Separate each scene with a blank line. Each paragraph becomes one scene in your video.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Visual Style Section */}
+        <div className="bg-white rounded-desktop p-6 shadow-md border border-gray-200">
+          <div className="flex items-center justify-between mb-5 pb-4 border-b border-gray-200">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-6 h-6 text-primary-500" />
+              <h2 className="text-2xl font-bold text-gray-900">Visual Style</h2>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowStyleGallery(!showStyleGallery)}
+              className="px-4 py-2 bg-primary-500 text-white rounded-desktop hover:bg-primary-600 transition-colors font-medium text-sm"
+            >
+              {showStyleGallery ? 'Hide Gallery' : 'Browse All 73 Styles'}
+            </button>
+          </div>
+
+          {/* Currently Selected Style */}
+          <div className="mb-4 p-4 bg-gradient-to-r from-primary-50 to-blue-50 rounded-desktop border border-primary-200">
+            <p className="text-sm text-gray-700 mb-1">Selected Style:</p>
+            <p className="text-lg font-bold text-primary-700 capitalize">{formData.style.replace(/_/g, ' ')}</p>
+          </div>
+
+          {/* Style Gallery */}
+          {showStyleGallery && (
+            <StyleGallery
+              selectedStyle={formData.style}
+              onSelect={(style) => {
+                setFormData({...formData, style})
+                setShowStyleGallery(false)
+                toast.success(`Style changed to: ${style.replace(/_/g, ' ')}`)
+              }}
+            />
+          )}
+        </div>
+
+        {/* Video Settings */}
+        <div className="bg-white rounded-desktop p-6 shadow-md border border-gray-200">
+          <div className="flex items-center gap-2 mb-5 pb-4 border-b border-gray-200">
+            <SettingsIcon className="w-6 h-6 text-primary-500" />
+            <h2 className="text-2xl font-bold text-gray-900">Video Settings</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <SettingsIcon className="w-4 h-4 inline mr-1" />
+                Resolution
+              </label>
+              <select
+                value={formData.resolution}
+                onChange={(e) => setFormData({...formData, resolution: e.target.value})}
+                className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-semibold cursor-pointer appearance-none"
+              >
+                <option value="720p">720p (HD)</option>
+                <option value="1080p">1080p (Full HD) ⭐</option>
+                <option value="2K">2K (QHD)</option>
+                <option value="4K">4K (Ultra HD)</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                📱 Orientation
+              </label>
+              <select
+                value={formData.orientation}
+                onChange={(e) => setFormData({...formData, orientation: e.target.value})}
+                className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-semibold cursor-pointer"
+              >
+                <option value="portrait">📱 Portrait (9:16)</option>
+                <option value="landscape">🖥️ Landscape (16:9)</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <Type className="w-4 h-4 inline mr-1" />
+                Subtitle Font
+              </label>
+              <select
+                value={formData.font || ''}
+                onChange={(e) => setFormData({...formData, font: e.target.value})}
+                className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-semibold cursor-pointer"
+              >
+                <option value="">Default Font</option>
+                {fonts.map(font => (
+                  <option key={font} value={font}>{font.replace('.ttf', '')}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Advanced Options */}
+        <div className="bg-white rounded-desktop p-6 shadow-md border border-gray-200">
+          <button
+            type="button"
+            onClick={() => setShowAdvanced(!showAdvanced)}
+            className="w-full flex items-center justify-between mb-4"
+          >
+            <div className="flex items-center gap-2">
+              <Wand2 className="w-6 h-6 text-primary-500" />
+              <h2 className="text-2xl font-bold text-gray-900">Advanced Options</h2>
+            </div>
+            <span className="text-primary-500 font-medium">
+              {showAdvanced ? '▼ Hide' : '▶ Show'}
+            </span>
+          </button>
+
+          {showAdvanced && (
+            <div className="space-y-5 pt-4 border-t border-gray-200">
+              {/* Background Music */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <Music className="w-4 h-4 inline mr-1" />
+                  Background Music <span className="text-gray-400">(Optional)</span>
+                </label>
+                <select
+                  value={formData.backgroundMusic || ''}
+                  onChange={(e) => setFormData({...formData, backgroundMusic: e.target.value})}
+                  className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-semibold cursor-pointer"
+                >
+                  <option value="">No Background Music</option>
+                  {musicFiles.map(music => (
+                    <option key={music} value={music}>{music.replace('.mp3', '').replace('.MP3', '')}</option>
+                  ))}
+                </select>
+                <p className="mt-2 text-xs text-gray-500">Add background music to your video (mixed with narration)</p>
+              </div>
+
+              {/* Video Overlay */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <Layers className="w-4 h-4 inline mr-1" />
+                  Video Overlay <span className="text-gray-400">(Optional)</span>
+                </label>
+                <select
+                  value={formData.videoOverlay || ''}
+                  onChange={(e) => setFormData({...formData, videoOverlay: e.target.value})}
+                  className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-semibold cursor-pointer"
+                >
+                  <option value="">No Overlay Effect</option>
+                  {overlayFiles.map(overlay => (
+                    <option key={overlay} value={overlay}>{overlay.replace('.mp4', '')}</option>
+                  ))}
+                </select>
+                <p className="mt-2 text-xs text-gray-500">Add particle effects or visual overlays to enhance your video</p>
+              </div>
+
+              {/* Custom Instructions */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Custom Image Instructions <span className="text-gray-400">(Optional)</span>
+                </label>
+                <textarea
+                  value={formData.customInstructions || ''}
+                  onChange={(e) => setFormData({...formData, customInstructions: e.target.value})}
+                  className="w-full px-4 py-3 bg-[#F9F9FA] border-2 border-gray-300 rounded-desktop focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-900 font-medium placeholder-gray-400 text-sm"
+                  rows={4}
+                  placeholder="Describe specific characters, settings, or visual elements that should be consistent across all scenes... For example: 'All scenes should feature a young woman with long brown hair wearing a red jacket in a modern city setting.'"
+                />
+                <p className="mt-2 text-xs text-gray-500">These instructions will be applied to all scene prompts for consistency</p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-4 justify-end bg-white rounded-desktop p-6 shadow-md border border-gray-200">
+          <button
+            type="button"
+            onClick={() => navigate('/')}
+            className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-desktop hover:bg-gray-50 transition-all font-semibold flex items-center gap-2"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Cancel
+          </button>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-desktop hover:from-primary-600 hover:to-primary-700 transition-all font-semibold shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+          >
+            {isLoading ? (
+              <>
+                <div className="w-5 h-5 border-3 border-white border-t-transparent rounded-full animate-spin" />
+                Creating...
+              </>
+            ) : (
+              <>
+                <Video className="w-5 h-5" />
+                Create Video
+                <Sparkles className="w-4 h-4" />
+              </>
+            )}
+          </button>
+        </div>
+      </form>
+
+      {/* Info Card */}
+      <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-desktop p-6 border border-blue-200">
+        <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+          <span>💡</span> Pro Tips for Best Results
+        </h3>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex items-start gap-2">
+            <span className="text-primary-500 font-bold">→</span>
+            <span><strong>Script Format:</strong> Each blank line creates a new scene. Keep paragraphs concise (2-3 sentences)</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-500 font-bold">→</span>
+            <span><strong>Visual Styles:</strong> Browse all 73 styles to find the perfect look for your video</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-500 font-bold">→</span>
+            <span><strong>Custom Instructions:</strong> Describe consistent characters or settings for better scene coherence</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-500 font-bold">→</span>
+            <span><strong>Background Music:</strong> Add mood with background music (optional but recommended)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+

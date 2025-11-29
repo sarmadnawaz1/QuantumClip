@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Upbeat Corporate",
+    "file": "upbeat_corporate.mp3",
+    "keywords": ["business", "corporate", "upbeat", "positive", "motivational"],
+    "artist": "Royalty Free Music",
+    "source": "Sample"
+  },
+  {
+    "id": 2,
+    "title": "Inspiring Technology",
+    "file": "inspiring_technology.mp3",
+    "keywords": ["technology", "innovation", "inspiring", "modern", "digital"],
+    "artist": "Royalty Free Music",
+    "source": "Sample"
+  },
+  {
+    "id": 3,
+    "title": "Calm Ambient",
+    "file": "calm_ambient.mp3",
+    "keywords": ["calm", "ambient", "relaxing", "peaceful", "background"],
+    "artist": "Royalty Free Music",
+    "source": "Sample"
+  },
+  {
+    "id": 4,
+    "title": "Energetic Pop",
+    "file": "energetic_pop.mp3",
+    "keywords": ["energetic", "pop", "fun", "upbeat", "dynamic"],
+    "artist": "Royalty Free Music",
+    "source": "Sample"
+  },
+  {
+    "id": 5,
+    "title": "Cinematic Epic",
+    "file": "cinematic_epic.mp3",
+    "keywords": ["cinematic", "epic", "dramatic", "powerful", "emotional"],
+    "artist": "Royalty Free Music",
+    "source": "Sample"
+  }
+]

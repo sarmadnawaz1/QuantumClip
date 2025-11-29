@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#05071a] text-white antialiased;
+    background-image: linear-gradient(180deg, #05071a 0%, #071033 50%, #031022 100%);
+  }
+}
+
+.app-panel {
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(16, 22, 46, 0.92), rgba(10, 18, 45, 0.78));
+  box-shadow: 0 28px 60px rgba(5, 9, 30, 0.48);
+  backdrop-filter: blur(26px);
+}
+
+body .bg-white\/70 {
+  background: rgba(12, 20, 52, 0.68) !important;
+  color: #d9e3ff !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+body .bg-gray-100 {
+  background: rgba(18, 26, 62, 0.6) !important;
+  color: #e7ecff !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.glass-field {
+  border-radius: 16px;
+  border: 1px solid rgba(116, 140, 255, 0.28);
+  background: rgba(7, 13, 35, 0.7);
+  padding: 0.85rem 1rem;
+  padding-left: 3.25rem;
+  color: #f4f6ff;
+  font-weight: 500;
+  transition: all 180ms ease;
+}
+
+select.glass-field {
+  padding-left: 1rem;
+  padding-right: 2.75rem;
+  background-image: linear-gradient(135deg, rgba(38, 62, 140, 0.35), rgba(18, 46, 110, 0.45));
+}
+
+select.glass-field option {
+  background: #0b1538;
+  color: #f4f6ff;
+}
+
+.glass-field::placeholder {
+  color: rgba(203, 212, 255, 0.45);
+}
+
+.glass-field:focus {
+  outline: none;
+  border-color: rgba(140, 164, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(90, 130, 255, 0.28);
+}
+
+.glass-chip {
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: rgba(12, 30, 80, 0.65);
+  border: 1px solid rgba(132, 154, 255, 0.35);
+  color: #dce6ff;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.glass-chip:hover {
+  background: rgba(45, 76, 170, 0.68);
+  transform: translateY(-1px);
+}
+
+.glass-divider {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.glass-muted {
+  color: rgba(205, 217, 255, 0.72) !important;
+}
+
+.glass-heading {
+  color: #f3f6ff !important;
+}
+
+.glass-subheading {
+  color: rgba(196, 208, 255, 0.85) !important;
+}
+
+.glass-danger {
+  color: #ff9d9d !important;
+}
+
+.glass-gradient-card {
+  border-radius: 22px;
+  border: 1px solid rgba(144, 172, 255, 0.32);
+  background: linear-gradient(135deg, rgba(45, 90, 255, 0.32), rgba(21, 164, 255, 0.18));
+  box-shadow: 0 16px 40px rgba(6, 12, 40, 0.45);
+}
+
+/* Legacy utility overrides for dark theme alignment */
+body .bg-white {
+  background: rgba(11, 18, 48, 0.72) !important;
+  backdrop-filter: blur(24px);
+}
+
+body .border-gray-200 {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+body .border-gray-300 {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+body .bg-[#F9F9FA] {
+  background: rgba(8, 14, 40, 0.78) !important;
+  border-color: rgba(140, 162, 255, 0.3) !important;
+}
+
+body .bg-primary-50,
+body .bg-blue-50,
+body .bg-green-50 {
+  background: rgba(36, 72, 160, 0.35) !important;
+  border-color: rgba(122, 156, 255, 0.3) !important;
+  color: #d5e2ff !important;
+}
+
+body .from-slate-50 {
+  --tw-gradient-from: rgba(38, 58, 132, 0.35) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), rgba(38, 58, 132, 0.18) !important;
+}
+
+body .via-white {
+  --tw-gradient-stops: var(--tw-gradient-from), rgba(24, 36, 96, 0.18), var(--tw-gradient-to, rgba(24, 36, 96, 0)) !important;
+}
+
+body .to-slate-50 {
+  --tw-gradient-to: rgba(14, 26, 68, 0.35) !important;
+}
+
+body .border-primary-200 {
+  border-color: rgba(134, 162, 255, 0.28) !important;
+}
+
+body .bg-emerald-100 {
+  background: rgba(32, 188, 164, 0.24) !important;
+  color: #9ff7df !important;
+  border-color: rgba(68, 222, 196, 0.4) !important;
+}
+
+body .text-emerald-600 {
+  color: #7ef2d3 !important;
+}
+
+body .bg-red-100 {
+  background: rgba(224, 82, 106, 0.22) !important;
+  color: #ffb4c5 !important;
+  border-color: rgba(255, 132, 150, 0.35) !important;
+}
+
+body .text-red-600 {
+  color: #ff9aa9 !important;
+}
+
+body .text-gray-900,
+body .text-gray-800 {
+  color: rgba(242, 245, 255, 0.96) !important;
+}
+
+body .text-gray-700,
+body .text-gray-600 {
+  color: rgba(210, 218, 255, 0.82) !important;
+}
+
+body .text-gray-500,
+body .text-gray-400 {
+  color: rgba(190, 205, 255, 0.7) !important;
+}
+
+body .shadow-md,
+body .shadow-sm {
+  box-shadow: 0 24px 48px rgba(5, 10, 35, 0.45) !important;
+}
+
+body .hover\:bg-white\/50:hover,
+body .hover\:bg-primary-100:hover,
+body .hover\:bg-green-100:hover,
+body .hover\:bg-blue-100:hover,
+body .hover\:bg-white\/10:hover {
+  background: rgba(80, 115, 255, 0.35) !important;
+}
+
+body input,
+body textarea,
+body select {
+  background: rgba(8, 13, 38, 0.72);
+  color: #f1f5ff;
+  border-color: rgba(135, 159, 255, 0.28);
+  border-radius: 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+body input::placeholder,
+body textarea::placeholder {
+  color: rgba(197, 208, 255, 0.45);
+}
+
+body input:focus,
+body textarea:focus,
+body select:focus {
+  border-color: rgba(144, 174, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(90, 130, 255, 0.28);
+  outline: none;
+}
+
+.glass-slider {
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(87, 123, 255, 0.75), rgba(129, 72, 255, 0.75));
+}
+
+.glass-slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 999px;
+  background: #f4f6ff;
+  border: 2px solid rgba(98, 125, 255, 0.6);
+  box-shadow: 0 4px 12px rgba(22, 38, 94, 0.45);
+}
+
+.glass-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 999px;
+  background: #f4f6ff;
+  border: 2px solid rgba(98, 125, 255, 0.6);
+  box-shadow: 0 4px 12px rgba(22, 38, 94, 0.45);
+}
+
+body button {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+body button:active {
+  transform: translateY(1px);
+}
+
+body .text-primary-700,
+body .text-primary-600,
+body .text-primary-500 {
+  color: #79a8ff !important;
+}
+
+body .bg-primary-500 {
+  background: linear-gradient(135deg, #527dff, #7450ff) !important;
+}
+
+body .bg-white\/10 {
+  background: rgba(24, 36, 74, 0.65) !important;
+}
+
+body .bg-white\/8 {
+  background: rgba(21, 32, 70, 0.58) !important;
+}
+

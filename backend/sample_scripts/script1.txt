@@ -1,0 +1,9 @@
+This is a sample script for the first video.
+
+It demonstrates how the custom scripts from folder feature works.
+
+Each paragraph will be treated as a separate scene in the video.
+
+The filename (without extension) will be used as the title for the video.
+
+You can create multiple script files in a folder and generate videos for all of them in batch.

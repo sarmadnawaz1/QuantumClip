@@ -1,0 +1,521 @@
+{
+  "generated_at": "2025-07-24 17:06:19",
+  "total_styles": 73,
+  "successful_generations": 73,
+  "failed_generations": 0,
+  "prompt_type": "Style-specific prompts with character portraits",
+  "model_used": "Runware Flex Schenele",
+  "styles": {
+    "Photorealistic": {
+      "normalized_name": "photorealistic",
+      "filename": "photorealistic_preview.png",
+      "prompt": "A young woman with natural beauty, soft lighting, professional portrait photography, detailed facial features, realistic skin texture, natural hair, warm expression, high-quality camera shot",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Cinematic": {
+      "normalized_name": "cinematic",
+      "filename": "cinematic_preview.png",
+      "prompt": "A young man in dramatic cinematic lighting, movie scene atmosphere, film noir style composition, professional cinematography, moody shadows and highlights, epic visual storytelling",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Hyperrealistic": {
+      "normalized_name": "hyperrealistic",
+      "filename": "hyperrealistic_preview.png",
+      "prompt": "An incredibly detailed portrait, hyperrealistic art style, photographic precision, ultra-detailed features, lifelike rendering, masterful realism",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Anime": {
+      "normalized_name": "anime",
+      "filename": "anime_preview.png",
+      "prompt": "A beautiful anime girl with large expressive eyes, colorful hair, detailed anime art style, vibrant colors, clean linework, Japanese animation aesthetic, kawaii character design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Comic Book": {
+      "normalized_name": "comic_book",
+      "filename": "comic_book_preview.png",
+      "prompt": "A superhero character in dynamic pose, bold comic book art style, vibrant colors, strong outlines, action scene composition, graphic novel illustration, pop art aesthetic",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Pixar Art": {
+      "normalized_name": "pixar_art",
+      "filename": "pixar_art_preview.png",
+      "prompt": "A cheerful young character in Pixar 3D animation style, colorful and whimsical, family-friendly design, smooth 3D rendering, expressive features, Disney-Pixar quality",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "3D Cartoon": {
+      "normalized_name": "3d_cartoon",
+      "filename": "3d_cartoon_preview.png",
+      "prompt": "A friendly cartoon character, 3D animated style, colorful and playful, smooth 3D rendering, family-friendly design, animated movie quality",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Ghibli": {
+      "normalized_name": "ghibli",
+      "filename": "ghibli_preview.png",
+      "prompt": "A gentle character in Studio Ghibli style, soft watercolor textures, whimsical design, Miyazaki-inspired art, magical atmosphere, hand-drawn animation quality",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "2D Cartoon Horror": {
+      "normalized_name": "2d_cartoon_horror",
+      "filename": "2d_cartoon_horror_preview.png",
+      "prompt": "A spooky cartoon character in 2D horror style, dark animated aesthetic, creepy but cartoonish features, horror cartoon illustration with bold outlines, eerie atmosphere, gothic cartoon design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "2D Old Cavetime Cartoons": {
+      "normalized_name": "2d_old_cavetime_cartoons",
+      "filename": "2d_old_cavetime_cartoons_preview.png",
+      "prompt": "A prehistoric cartoon character in old caveman style, stone age aesthetic, primitive 2D animation, classic cartoon caveman design, simple bold outlines, earthy colors, vintage cartoon style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Simple 2D Cartoon": {
+      "normalized_name": "simple_2d_cartoon",
+      "filename": "simple_2d_cartoon_preview.png",
+      "prompt": "A basic 2D cartoon character, simple animation style, clean lines, minimal details, flat colors, classic cartoon design, easy-to-animate aesthetic, family-friendly appearance",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Medieval Cartoon Satire": {
+      "normalized_name": "medieval_cartoon_satire",
+      "filename": "medieval_cartoon_satire_preview.png",
+      "prompt": "A medieval cartoon character with humorous exaggerated features, satirical medieval art style, hand-drawn cartoon with distorted expressive face, medieval clothing and props, muted earthy color palette with browns and ochres, bold outlines and flat shading, comedic historical parody aesthetic",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Cartoon": {
+      "normalized_name": "cartoon",
+      "filename": "cartoon_preview.png",
+      "prompt": "A cheerful cartoon character, animated style, bright colors, family-friendly design, classic animation aesthetic, expressive features",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Stick Animation": {
+      "normalized_name": "stick_animation",
+      "filename": "stick_animation_preview.png",
+      "prompt": "Simple stick figure illustration with basic line-drawn characters, minimalist design, clean black outlines, educational diagram style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Stick Animation Style": {
+      "normalized_name": "stick_animation_style",
+      "filename": "stick_animation_style_preview.png",
+      "prompt": "A simple stick figure character, basic line art, minimalist design, educational diagram style, clean black lines on white background",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Digital Art": {
+      "normalized_name": "digital_art",
+      "filename": "digital_art_preview.png",
+      "prompt": "A futuristic character portrait, digital painting style, vibrant digital colors, modern art techniques, detailed digital brushwork, contemporary illustration",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "AI Generated": {
+      "normalized_name": "ai_generated",
+      "filename": "ai_generated_preview.png",
+      "prompt": "A futuristic AI-generated character, digital art style, technological aesthetic, artificial intelligence theme, cybernetic elements",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Flat Design": {
+      "normalized_name": "flat_design",
+      "filename": "flat_design_preview.png",
+      "prompt": "A modern character in flat design style, simple geometric shapes, bold colors, clean vector art, contemporary graphic design aesthetic",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Minimalist": {
+      "normalized_name": "minimalist",
+      "filename": "minimalist_preview.png",
+      "prompt": "A simple elegant portrait, clean minimalist design, neutral colors, simple composition, modern minimalist aesthetic, uncluttered visual style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Oil Painting": {
+      "normalized_name": "oil_painting",
+      "filename": "oil_painting_preview.png",
+      "prompt": "A classical portrait of a young woman, traditional oil painting style, rich textures, masterful brushstrokes, Renaissance-inspired composition, warm color palette",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Watercolor": {
+      "normalized_name": "watercolor",
+      "filename": "watercolor_preview.png",
+      "prompt": "A gentle portrait in watercolor style, soft flowing colors, artistic brush techniques, dreamy watercolor effects, delicate color blending, artistic paper texture",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Charcoal Drawing": {
+      "normalized_name": "charcoal_drawing",
+      "filename": "charcoal_drawing_preview.png",
+      "prompt": "Artistic charcoal drawing with rich black tones, soft smudging effects, dramatic contrast, textured paper appearance, expressive sketching techniques",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Whiteboard Drawing": {
+      "normalized_name": "whiteboard_drawing",
+      "filename": "whiteboard_drawing_preview.png",
+      "prompt": "Clean whiteboard illustration with colorful marker strokes, bright white background, educational presentation style, hand-drawn marker appearance",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Monochrome": {
+      "normalized_name": "monochrome",
+      "filename": "monochrome_preview.png",
+      "prompt": "Black and white photography with dramatic contrast, artistic grayscale tones, classic monochrome aesthetic, sophisticated composition",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Old History Painting": {
+      "normalized_name": "old_history_painting",
+      "filename": "old_history_painting_preview.png",
+      "prompt": "Classical historical painting style with Renaissance techniques, rich oil painting textures, museum-quality artistry, traditional fine art methods",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Sketch": {
+      "normalized_name": "sketch",
+      "filename": "sketch_preview.png",
+      "prompt": "A character drawn in sketch style, pencil drawing aesthetic, artistic line work, hand-drawn illustration, sketchy art style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Dark Aesthetic": {
+      "normalized_name": "dark_aesthetic",
+      "filename": "dark_aesthetic_preview.png",
+      "prompt": "A mysterious figure in dark gothic style, moody atmosphere, deep shadows, dramatic contrast, dark romantic aesthetic, mysterious beauty",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Horror Gothic": {
+      "normalized_name": "horror_gothic",
+      "filename": "horror_gothic_preview.png",
+      "prompt": "A gothic character in dark horror style, Victorian gothic aesthetic, dramatic shadows, mysterious atmosphere, dark romantic beauty",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Horror Realistic": {
+      "normalized_name": "horror_realistic",
+      "filename": "horror_realistic_preview.png",
+      "prompt": "A realistic horror character, unsettling atmosphere, dramatic lighting, psychological horror aesthetic, realistic fear elements",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Horror Vintage": {
+      "normalized_name": "horror_vintage",
+      "filename": "horror_vintage_preview.png",
+      "prompt": "A vintage horror character, classic 1950s horror movie style, retro horror aesthetic, vintage film grain, classic monster movie vibes",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Film Noir": {
+      "normalized_name": "film_noir",
+      "filename": "film_noir_preview.png",
+      "prompt": "A classic film noir character, black and white photography, dramatic shadows, vintage 1940s style, classic Hollywood glamour, noir atmosphere",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Pastel Dreamscape": {
+      "normalized_name": "pastel_dreamscape",
+      "filename": "pastel_dreamscape_preview.png",
+      "prompt": "A dreamy character in soft pastel colors, ethereal atmosphere, gentle lighting, fantasy dreamlike quality, soft romantic aesthetic",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Fantasy Vibrant": {
+      "normalized_name": "fantasy_vibrant",
+      "filename": "fantasy_vibrant_preview.png",
+      "prompt": "A magical character in fantasy setting, vibrant fantasy colors, mystical atmosphere, enchanted forest background, magical realism style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Neon Cyberpunk": {
+      "normalized_name": "neon_cyberpunk",
+      "filename": "neon_cyberpunk_preview.png",
+      "prompt": "A cyberpunk character with neon lights, futuristic cityscape background, electric blue and pink neon colors, high-tech aesthetic, dystopian future style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Synthwave": {
+      "normalized_name": "synthwave",
+      "filename": "synthwave_preview.png",
+      "prompt": "A retro-futuristic character, synthwave aesthetic, neon pink and cyan colors, 80s sci-fi style, electronic music vibes, outrun atmosphere",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Cyberpunk 2077": {
+      "normalized_name": "cyberpunk_2077",
+      "filename": "cyberpunk_2077_preview.png",
+      "prompt": "A cyberpunk character in Night City style, high-tech dystopian future, advanced technology, neon-lit urban environment, next-gen cyberpunk",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Pixel Art": {
+      "normalized_name": "pixel_art",
+      "filename": "pixel_art_preview.png",
+      "prompt": "A retro character in 8-bit pixel art style, nostalgic video game aesthetic, limited color palette, crisp pixel details, classic arcade game design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Retro 80s": {
+      "normalized_name": "retro_80s",
+      "filename": "retro_80s_preview.png",
+      "prompt": "A stylish person in 1980s fashion, retro aesthetic, bright neon colors, vintage 80s style, nostalgic atmosphere, retro-futuristic design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Vaporwave": {
+      "normalized_name": "vaporwave",
+      "filename": "vaporwave_preview.png",
+      "prompt": "A dreamy character in vaporwave aesthetic, pastel pink and blue colors, retro-futuristic style, nostalgic 80s-90s vibes, synthwave atmosphere",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Cottagecore": {
+      "normalized_name": "cottagecore",
+      "filename": "cottagecore_preview.png",
+      "prompt": "A peaceful person in countryside setting, cottagecore aesthetic, natural beauty, rustic charm, cozy rural atmosphere, vintage pastoral style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Lofi Aesthetic": {
+      "normalized_name": "lofi_aesthetic",
+      "filename": "lofi_aesthetic_preview.png",
+      "prompt": "A relaxed character in lofi style, chill atmosphere, soft muted colors, cozy vibes, study session aesthetic, peaceful mood",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Gen Z Core": {
+      "normalized_name": "gen_z_core",
+      "filename": "gen_z_core_preview.png",
+      "prompt": "A trendy Gen Z character, modern youth culture, bright saturated colors, social media aesthetic, contemporary fashion, viral appeal",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Dark Academia": {
+      "normalized_name": "dark_academia",
+      "filename": "dark_academia_preview.png",
+      "prompt": "A scholarly character in dark academia style, gothic architecture background, vintage books, academic atmosphere, intellectual beauty",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Liminal Space": {
+      "normalized_name": "liminal_space",
+      "filename": "liminal_space_preview.png",
+      "prompt": "A character in liminal space, transitional environment, eerie emptiness, surreal atmosphere, dreamlike quality, nostalgic unease",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Backrooms": {
+      "normalized_name": "backrooms",
+      "filename": "backrooms_preview.png",
+      "prompt": "A character in backrooms aesthetic, yellow fluorescent lighting, endless office spaces, surreal liminal environment, unsettling atmosphere",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "VHS Aesthetic": {
+      "normalized_name": "vhs_aesthetic",
+      "filename": "vhs_aesthetic_preview.png",
+      "prompt": "A retro character with VHS tape effects, analog video aesthetic, vintage video quality, 90s nostalgia, retro technology vibes",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Y2K": {
+      "normalized_name": "y2k",
+      "filename": "y2k_preview.png",
+      "prompt": "A futuristic character in Y2K style, early 2000s aesthetic, metallic colors, digital age design, millennium bug era fashion, tech-optimistic style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Nostalgic Filter": {
+      "normalized_name": "nostalgic_filter",
+      "filename": "nostalgic_filter_preview.png",
+      "prompt": "A vintage-style portrait with nostalgic filter, warm sepia tones, old photograph aesthetic, vintage camera effects, timeless beauty",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "God Anime Vine": {
+      "normalized_name": "god_anime_vine",
+      "filename": "god_anime_vine_preview.png",
+      "prompt": "An epic anime character with divine powers, dramatic anime art style, powerful aura, celestial background, godlike presence, epic anime scene",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Minimalist Infographic": {
+      "normalized_name": "minimalist_infographic",
+      "filename": "minimalist_infographic_preview.png",
+      "prompt": "Clean infographic design with geometric shapes, data visualization elements, modern typography, professional business charts, white background, corporate presentation style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Corporate Presentation": {
+      "normalized_name": "corporate_presentation",
+      "filename": "corporate_presentation_preview.png",
+      "prompt": "Professional business presentation slide, clean corporate design, modern charts and graphs, executive boardroom aesthetic, business intelligence dashboard, professional layout",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Tech Tutorial": {
+      "normalized_name": "tech_tutorial",
+      "filename": "tech_tutorial_preview.png",
+      "prompt": "Modern software interface screenshot, clean UI design, tech tutorial aesthetic, digital workspace, contemporary app interface, professional documentation style",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Educational Diagram": {
+      "normalized_name": "educational_diagram",
+      "filename": "educational_diagram_preview.png",
+      "prompt": "Clear educational diagram with instructional elements, academic presentation style, learning-focused design, professional educational materials, clean visual explanation",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Data Visualization": {
+      "normalized_name": "data_visualization",
+      "filename": "data_visualization_preview.png",
+      "prompt": "Modern data dashboard with charts and graphs, statistical displays, analytical visualization, business metrics design, contemporary data presentation, professional analytics",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Abstract Geometric": {
+      "normalized_name": "abstract_geometric",
+      "filename": "abstract_geometric_preview.png",
+      "prompt": "Abstract geometric composition with modern shapes, minimalist patterns, contemporary art design, sophisticated color palette, artistic geometric forms",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Gradient Background": {
+      "normalized_name": "gradient_background",
+      "filename": "gradient_background_preview.png",
+      "prompt": "Smooth gradient background with modern color transitions, contemporary gradient design, atmospheric color blending, professional background aesthetic",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Neon Gaming": {
+      "normalized_name": "neon_gaming",
+      "filename": "neon_gaming_preview.png",
+      "prompt": "Gaming setup with RGB lighting, neon gaming aesthetic, cyberpunk gaming environment, LED lighting effects, modern gaming workspace, esports design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Productivity Aesthetic": {
+      "normalized_name": "productivity_aesthetic",
+      "filename": "productivity_aesthetic_preview.png",
+      "prompt": "Clean organized workspace, productivity setup design, modern office aesthetic, efficient workspace layout, professional productivity environment",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Study Motivation": {
+      "normalized_name": "study_motivation",
+      "filename": "study_motivation_preview.png",
+      "prompt": "Inspiring study environment, academic workspace design, motivational learning setup, focused study atmosphere, educational productivity space",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Ambient Workspace": {
+      "normalized_name": "ambient_workspace",
+      "filename": "ambient_workspace_preview.png",
+      "prompt": "Cozy work environment with atmospheric lighting, comfortable productivity space, modern home office aesthetic, relaxing workspace atmosphere",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Cozy Reading": {
+      "normalized_name": "cozy_reading",
+      "filename": "cozy_reading_preview.png",
+      "prompt": "Warm reading nook with soft lighting, comfortable reading space, literary atmosphere, bookish environment, peaceful reading corner with books",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Nature Documentary": {
+      "normalized_name": "nature_documentary",
+      "filename": "nature_documentary_preview.png",
+      "prompt": "Wildlife photography scene, natural environment beauty, documentary cinematography style, outdoor exploration visual, environmental storytelling",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Space Exploration": {
+      "normalized_name": "space_exploration",
+      "filename": "space_exploration_preview.png",
+      "prompt": "Cosmic space scene with stars and galaxies, astronomical photography, space mission aesthetic, futuristic space technology, celestial beauty",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Ocean Deep": {
+      "normalized_name": "ocean_deep",
+      "filename": "ocean_deep_preview.png",
+      "prompt": "Underwater ocean scene, marine environment beauty, aquatic exploration visual, deep sea atmosphere, oceanic color palette, underwater photography",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Mountain Landscape": {
+      "normalized_name": "mountain_landscape",
+      "filename": "mountain_landscape_preview.png",
+      "prompt": "Dramatic mountain vista, alpine environment beauty, landscape photography excellence, natural mountain scenery, outdoor adventure aesthetic",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "City Skyline": {
+      "normalized_name": "city_skyline",
+      "filename": "city_skyline_preview.png",
+      "prompt": "Urban cityscape with modern architecture, metropolitan skyline view, city lights at dusk, urban photography, contemporary city design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Sunset Vibes": {
+      "normalized_name": "sunset_vibes",
+      "filename": "sunset_vibes_preview.png",
+      "prompt": "Golden hour sunset scene, warm atmospheric lighting, peaceful evening atmosphere, romantic sunset beauty, natural golden lighting",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Rain Aesthetic": {
+      "normalized_name": "rain_aesthetic",
+      "filename": "rain_aesthetic_preview.png",
+      "prompt": "Atmospheric rainy scene, moody rain atmosphere, cozy rainy day vibes, peaceful precipitation beauty, contemplative rain ambiance",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Coffee Shop": {
+      "normalized_name": "coffee_shop",
+      "filename": "coffee_shop_preview.png",
+      "prompt": "Cozy café interior, warm coffee shop atmosphere, artisanal coffee culture, comfortable café environment, modern coffee shop design",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Library Study": {
+      "normalized_name": "library_study",
+      "filename": "library_study_preview.png",
+      "prompt": "Academic library setting, scholarly environment, quiet study space, intellectual atmosphere, educational ambiance, peaceful learning environment",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Meditation Space": {
+      "normalized_name": "meditation_space",
+      "filename": "meditation_space_preview.png",
+      "prompt": "Peaceful meditation room, zen environment design, mindful space with calming colors, spiritual ambiance, tranquil meditation setting",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Zen Garden": {
+      "normalized_name": "zen_garden",
+      "filename": "zen_garden_preview.png",
+      "prompt": "Minimalist Japanese zen garden, peaceful garden atmosphere, meditative landscape design, natural harmony, serene outdoor space",
+      "exists": true,
+      "file_size": 4136298
+    },
+    "Minimalist Room": {
+      "normalized_name": "minimalist_room",
+      "filename": "minimalist_room_preview.png",
+      "prompt": "Clean minimalist interior, modern minimalism design, uncluttered living space, contemporary home aesthetic, sophisticated simplicity",
+      "exists": true,
+      "file_size": 4136298
+    }
+  }
+}

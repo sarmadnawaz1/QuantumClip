@@ -1,0 +1,367 @@
+[
+  {
+    "style": "Comic Book",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Space Exploration",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Minimalist Room",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Anime",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Monochrome",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Sketch",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Ghibli",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Neon Cyberpunk",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Dark Aesthetic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Horror Realistic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Film Noir",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Lofi Aesthetic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Sunset Vibes",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Abstract Geometric",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Y2K",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Nature Documentary",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Simple 2D Cartoon",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Fantasy Vibrant",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Gradient Background",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Watercolor",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Pixel Art",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Minimalist",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Nostalgic Filter",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Horror Vintage",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Cottagecore",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Productivity Aesthetic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Ocean Deep",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Retro 80s",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Cartoon",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Data Visualization",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Library Study",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Cinematic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Coffee Shop",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Meditation Space",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Whiteboard Drawing",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Charcoal Drawing",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Corporate Presentation",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "2D Old Cavetime Cartoons",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Synthwave",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Ambient Workspace",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Dark Academia",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Cozy Reading",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Study Motivation",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Oil Painting",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Photorealistic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Stick Animation Style",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Pixar Art",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Cyberpunk 2077",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Minimalist Infographic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "3D Cartoon",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "God Anime Vine",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Digital Art",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Stick Animation",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "VHS Aesthetic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Vaporwave",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Hyperrealistic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Backrooms",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Pastel Dreamscape",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Neon Gaming",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "AI Generated",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "2D Cartoon Horror",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Horror Gothic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "City Skyline",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Mountain Landscape",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Medieval Cartoon Satire",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Gen Z Core",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Rain Aesthetic",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Flat Design",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Liminal Space",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Zen Garden",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Tech Tutorial",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Educational Diagram",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  },
+  {
+    "style": "Old History Painting",
+    "status": "failed",
+    "error": "HTTP 405: {\"detail\":\"Method Not Allowed\"}"
+  }
+]

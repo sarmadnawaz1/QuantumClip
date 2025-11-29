@@ -1,0 +1,637 @@
+[
+  {
+    "style": "Photorealistic",
+    "normalized": "photorealistic",
+    "generated": 2,
+    "files": [
+      "style_samples/photorealistic_scene1.png",
+      "style_samples/photorealistic_scene2.png"
+    ]
+  },
+  {
+    "style": "Cinematic",
+    "normalized": "cinematic",
+    "generated": 2,
+    "files": [
+      "style_samples/cinematic_scene1.png",
+      "style_samples/cinematic_scene2.png"
+    ]
+  },
+  {
+    "style": "Hyperrealistic",
+    "normalized": "hyperrealistic",
+    "generated": 2,
+    "files": [
+      "style_samples/hyperrealistic_scene1.png",
+      "style_samples/hyperrealistic_scene2.png"
+    ]
+  },
+  {
+    "style": "Anime",
+    "normalized": "anime",
+    "generated": 2,
+    "files": [
+      "style_samples/anime_scene1.png",
+      "style_samples/anime_scene2.png"
+    ]
+  },
+  {
+    "style": "Comic Book",
+    "normalized": "comic_book",
+    "generated": 2,
+    "files": [
+      "style_samples/comic_book_scene1.png",
+      "style_samples/comic_book_scene2.png"
+    ]
+  },
+  {
+    "style": "Pixar Art",
+    "normalized": "pixar_art",
+    "generated": 1,
+    "files": [
+      "style_samples/pixar_art_scene2.png"
+    ]
+  },
+  {
+    "style": "3D Cartoon",
+    "normalized": "3d_cartoon",
+    "generated": 2,
+    "files": [
+      "style_samples/3d_cartoon_scene1.png",
+      "style_samples/3d_cartoon_scene2.png"
+    ]
+  },
+  {
+    "style": "Ghibli",
+    "normalized": "ghibli",
+    "generated": 2,
+    "files": [
+      "style_samples/ghibli_scene1.png",
+      "style_samples/ghibli_scene2.png"
+    ]
+  },
+  {
+    "style": "2D Cartoon Horror",
+    "normalized": "2d_cartoon_horror",
+    "generated": 2,
+    "files": [
+      "style_samples/2d_cartoon_horror_scene1.png",
+      "style_samples/2d_cartoon_horror_scene2.png"
+    ]
+  },
+  {
+    "style": "2D Old Cavetime Cartoons",
+    "normalized": "2d_old_cavetime_cartoons",
+    "generated": 2,
+    "files": [
+      "style_samples/2d_old_cavetime_cartoons_scene1.png",
+      "style_samples/2d_old_cavetime_cartoons_scene2.png"
+    ]
+  },
+  {
+    "style": "Simple 2D Cartoon",
+    "normalized": "simple_2d_cartoon",
+    "generated": 2,
+    "files": [
+      "style_samples/simple_2d_cartoon_scene1.png",
+      "style_samples/simple_2d_cartoon_scene2.png"
+    ]
+  },
+  {
+    "style": "Medieval Cartoon Satire",
+    "normalized": "medieval_cartoon_satire",
+    "generated": 2,
+    "files": [
+      "style_samples/medieval_cartoon_satire_scene1.png",
+      "style_samples/medieval_cartoon_satire_scene2.png"
+    ]
+  },
+  {
+    "style": "Cartoon",
+    "normalized": "cartoon",
+    "generated": 2,
+    "files": [
+      "style_samples/cartoon_scene1.png",
+      "style_samples/cartoon_scene2.png"
+    ]
+  },
+  {
+    "style": "Stick Animation",
+    "normalized": "stick_animation",
+    "generated": 2,
+    "files": [
+      "style_samples/stick_animation_scene1.png",
+      "style_samples/stick_animation_scene2.png"
+    ]
+  },
+  {
+    "style": "Stick Animation Style",
+    "normalized": "stick_animation_style",
+    "generated": 2,
+    "files": [
+      "style_samples/stick_animation_style_scene1.png",
+      "style_samples/stick_animation_style_scene2.png"
+    ]
+  },
+  {
+    "style": "Digital Art",
+    "normalized": "digital_art",
+    "generated": 2,
+    "files": [
+      "style_samples/digital_art_scene1.png",
+      "style_samples/digital_art_scene2.png"
+    ]
+  },
+  {
+    "style": "AI Generated",
+    "normalized": "ai_generated",
+    "generated": 2,
+    "files": [
+      "style_samples/ai_generated_scene1.png",
+      "style_samples/ai_generated_scene2.png"
+    ]
+  },
+  {
+    "style": "Flat Design",
+    "normalized": "flat_design",
+    "generated": 2,
+    "files": [
+      "style_samples/flat_design_scene1.png",
+      "style_samples/flat_design_scene2.png"
+    ]
+  },
+  {
+    "style": "Minimalist",
+    "normalized": "minimalist",
+    "generated": 2,
+    "files": [
+      "style_samples/minimalist_scene1.png",
+      "style_samples/minimalist_scene2.png"
+    ]
+  },
+  {
+    "style": "Oil Painting",
+    "normalized": "oil_painting",
+    "generated": 2,
+    "files": [
+      "style_samples/oil_painting_scene1.png",
+      "style_samples/oil_painting_scene2.png"
+    ]
+  },
+  {
+    "style": "Watercolor",
+    "normalized": "watercolor",
+    "generated": 1,
+    "files": [
+      "style_samples/watercolor_scene2.png"
+    ]
+  },
+  {
+    "style": "Charcoal Drawing",
+    "normalized": "charcoal_drawing",
+    "generated": 2,
+    "files": [
+      "style_samples/charcoal_drawing_scene1.png",
+      "style_samples/charcoal_drawing_scene2.png"
+    ]
+  },
+  {
+    "style": "Whiteboard Drawing",
+    "normalized": "whiteboard_drawing",
+    "generated": 2,
+    "files": [
+      "style_samples/whiteboard_drawing_scene1.png",
+      "style_samples/whiteboard_drawing_scene2.png"
+    ]
+  },
+  {
+    "style": "Monochrome",
+    "normalized": "monochrome",
+    "generated": 2,
+    "files": [
+      "style_samples/monochrome_scene1.png",
+      "style_samples/monochrome_scene2.png"
+    ]
+  },
+  {
+    "style": "Old History Painting",
+    "normalized": "old_history_painting",
+    "generated": 2,
+    "files": [
+      "style_samples/old_history_painting_scene1.png",
+      "style_samples/old_history_painting_scene2.png"
+    ]
+  },
+  {
+    "style": "Sketch",
+    "normalized": "sketch",
+    "generated": 2,
+    "files": [
+      "style_samples/sketch_scene1.png",
+      "style_samples/sketch_scene2.png"
+    ]
+  },
+  {
+    "style": "Dark Aesthetic",
+    "normalized": "dark_aesthetic",
+    "generated": 2,
+    "files": [
+      "style_samples/dark_aesthetic_scene1.png",
+      "style_samples/dark_aesthetic_scene2.png"
+    ]
+  },
+  {
+    "style": "Horror Gothic",
+    "normalized": "horror_gothic",
+    "generated": 2,
+    "files": [
+      "style_samples/horror_gothic_scene1.png",
+      "style_samples/horror_gothic_scene2.png"
+    ]
+  },
+  {
+    "style": "Horror Realistic",
+    "normalized": "horror_realistic",
+    "generated": 2,
+    "files": [
+      "style_samples/horror_realistic_scene1.png",
+      "style_samples/horror_realistic_scene2.png"
+    ]
+  },
+  {
+    "style": "Horror Vintage",
+    "normalized": "horror_vintage",
+    "generated": 2,
+    "files": [
+      "style_samples/horror_vintage_scene1.png",
+      "style_samples/horror_vintage_scene2.png"
+    ]
+  },
+  {
+    "style": "Film Noir",
+    "normalized": "film_noir",
+    "generated": 2,
+    "files": [
+      "style_samples/film_noir_scene1.png",
+      "style_samples/film_noir_scene2.png"
+    ]
+  },
+  {
+    "style": "Pastel Dreamscape",
+    "normalized": "pastel_dreamscape",
+    "generated": 2,
+    "files": [
+      "style_samples/pastel_dreamscape_scene1.png",
+      "style_samples/pastel_dreamscape_scene2.png"
+    ]
+  },
+  {
+    "style": "Fantasy Vibrant",
+    "normalized": "fantasy_vibrant",
+    "generated": 1,
+    "files": [
+      "style_samples/fantasy_vibrant_scene1.png"
+    ]
+  },
+  {
+    "style": "Neon Cyberpunk",
+    "normalized": "neon_cyberpunk",
+    "generated": 0,
+    "files": []
+  },
+  {
+    "style": "Synthwave",
+    "normalized": "synthwave",
+    "generated": 0,
+    "files": []
+  },
+  {
+    "style": "Cyberpunk 2077",
+    "normalized": "cyberpunk_2077",
+    "generated": 0,
+    "files": []
+  },
+  {
+    "style": "Pixel Art",
+    "normalized": "pixel_art",
+    "generated": 0,
+    "files": []
+  },
+  {
+    "style": "Retro 80s",
+    "normalized": "retro_80s",
+    "generated": 0,
+    "files": []
+  },
+  {
+    "style": "Vaporwave",
+    "normalized": "vaporwave",
+    "generated": 1,
+    "files": [
+      "style_samples/vaporwave_scene2.png"
+    ]
+  },
+  {
+    "style": "Cottagecore",
+    "normalized": "cottagecore",
+    "generated": 2,
+    "files": [
+      "style_samples/cottagecore_scene1.png",
+      "style_samples/cottagecore_scene2.png"
+    ]
+  },
+  {
+    "style": "Lofi Aesthetic",
+    "normalized": "lofi_aesthetic",
+    "generated": 1,
+    "files": [
+      "style_samples/lofi_aesthetic_scene2.png"
+    ]
+  },
+  {
+    "style": "Gen Z Core",
+    "normalized": "gen_z_core",
+    "generated": 2,
+    "files": [
+      "style_samples/gen_z_core_scene1.png",
+      "style_samples/gen_z_core_scene2.png"
+    ]
+  },
+  {
+    "style": "Dark Academia",
+    "normalized": "dark_academia",
+    "generated": 2,
+    "files": [
+      "style_samples/dark_academia_scene1.png",
+      "style_samples/dark_academia_scene2.png"
+    ]
+  },
+  {
+    "style": "Liminal Space",
+    "normalized": "liminal_space",
+    "generated": 2,
+    "files": [
+      "style_samples/liminal_space_scene1.png",
+      "style_samples/liminal_space_scene2.png"
+    ]
+  },
+  {
+    "style": "Backrooms",
+    "normalized": "backrooms",
+    "generated": 2,
+    "files": [
+      "style_samples/backrooms_scene1.png",
+      "style_samples/backrooms_scene2.png"
+    ]
+  },
+  {
+    "style": "VHS Aesthetic",
+    "normalized": "vhs_aesthetic",
+    "generated": 2,
+    "files": [
+      "style_samples/vhs_aesthetic_scene1.png",
+      "style_samples/vhs_aesthetic_scene2.png"
+    ]
+  },
+  {
+    "style": "Y2K",
+    "normalized": "y2k",
+    "generated": 2,
+    "files": [
+      "style_samples/y2k_scene1.png",
+      "style_samples/y2k_scene2.png"
+    ]
+  },
+  {
+    "style": "Nostalgic Filter",
+    "normalized": "nostalgic_filter",
+    "generated": 2,
+    "files": [
+      "style_samples/nostalgic_filter_scene1.png",
+      "style_samples/nostalgic_filter_scene2.png"
+    ]
+  },
+  {
+    "style": "God Anime Vine",
+    "normalized": "god_anime_vine",
+    "generated": 2,
+    "files": [
+      "style_samples/god_anime_vine_scene1.png",
+      "style_samples/god_anime_vine_scene2.png"
+    ]
+  },
+  {
+    "style": "Minimalist Infographic",
+    "normalized": "minimalist_infographic",
+    "generated": 2,
+    "files": [
+      "style_samples/minimalist_infographic_scene1.png",
+      "style_samples/minimalist_infographic_scene2.png"
+    ]
+  },
+  {
+    "style": "Corporate Presentation",
+    "normalized": "corporate_presentation",
+    "generated": 2,
+    "files": [
+      "style_samples/corporate_presentation_scene1.png",
+      "style_samples/corporate_presentation_scene2.png"
+    ]
+  },
+  {
+    "style": "Tech Tutorial",
+    "normalized": "tech_tutorial",
+    "generated": 2,
+    "files": [
+      "style_samples/tech_tutorial_scene1.png",
+      "style_samples/tech_tutorial_scene2.png"
+    ]
+  },
+  {
+    "style": "Educational Diagram",
+    "normalized": "educational_diagram",
+    "generated": 2,
+    "files": [
+      "style_samples/educational_diagram_scene1.png",
+      "style_samples/educational_diagram_scene2.png"
+    ]
+  },
+  {
+    "style": "Data Visualization",
+    "normalized": "data_visualization",
+    "generated": 1,
+    "files": [
+      "style_samples/data_visualization_scene1.png"
+    ]
+  },
+  {
+    "style": "Abstract Geometric",
+    "normalized": "abstract_geometric",
+    "generated": 2,
+    "files": [
+      "style_samples/abstract_geometric_scene1.png",
+      "style_samples/abstract_geometric_scene2.png"
+    ]
+  },
+  {
+    "style": "Gradient Background",
+    "normalized": "gradient_background",
+    "generated": 2,
+    "files": [
+      "style_samples/gradient_background_scene1.png",
+      "style_samples/gradient_background_scene2.png"
+    ]
+  },
+  {
+    "style": "Neon Gaming",
+    "normalized": "neon_gaming",
+    "generated": 1,
+    "files": [
+      "style_samples/neon_gaming_scene2.png"
+    ]
+  },
+  {
+    "style": "Productivity Aesthetic",
+    "normalized": "productivity_aesthetic",
+    "generated": 2,
+    "files": [
+      "style_samples/productivity_aesthetic_scene1.png",
+      "style_samples/productivity_aesthetic_scene2.png"
+    ]
+  },
+  {
+    "style": "Study Motivation",
+    "normalized": "study_motivation",
+    "generated": 2,
+    "files": [
+      "style_samples/study_motivation_scene1.png",
+      "style_samples/study_motivation_scene2.png"
+    ]
+  },
+  {
+    "style": "Ambient Workspace",
+    "normalized": "ambient_workspace",
+    "generated": 2,
+    "files": [
+      "style_samples/ambient_workspace_scene1.png",
+      "style_samples/ambient_workspace_scene2.png"
+    ]
+  },
+  {
+    "style": "Cozy Reading",
+    "normalized": "cozy_reading",
+    "generated": 2,
+    "files": [
+      "style_samples/cozy_reading_scene1.png",
+      "style_samples/cozy_reading_scene2.png"
+    ]
+  },
+  {
+    "style": "Nature Documentary",
+    "normalized": "nature_documentary",
+    "generated": 2,
+    "files": [
+      "style_samples/nature_documentary_scene1.png",
+      "style_samples/nature_documentary_scene2.png"
+    ]
+  },
+  {
+    "style": "Space Exploration",
+    "normalized": "space_exploration",
+    "generated": 2,
+    "files": [
+      "style_samples/space_exploration_scene1.png",
+      "style_samples/space_exploration_scene2.png"
+    ]
+  },
+  {
+    "style": "Ocean Deep",
+    "normalized": "ocean_deep",
+    "generated": 2,
+    "files": [
+      "style_samples/ocean_deep_scene1.png",
+      "style_samples/ocean_deep_scene2.png"
+    ]
+  },
+  {
+    "style": "Mountain Landscape",
+    "normalized": "mountain_landscape",
+    "generated": 2,
+    "files": [
+      "style_samples/mountain_landscape_scene1.png",
+      "style_samples/mountain_landscape_scene2.png"
+    ]
+  },
+  {
+    "style": "City Skyline",
+    "normalized": "city_skyline",
+    "generated": 2,
+    "files": [
+      "style_samples/city_skyline_scene1.png",
+      "style_samples/city_skyline_scene2.png"
+    ]
+  },
+  {
+    "style": "Sunset Vibes",
+    "normalized": "sunset_vibes",
+    "generated": 2,
+    "files": [
+      "style_samples/sunset_vibes_scene1.png",
+      "style_samples/sunset_vibes_scene2.png"
+    ]
+  },
+  {
+    "style": "Rain Aesthetic",
+    "normalized": "rain_aesthetic",
+    "generated": 2,
+    "files": [
+      "style_samples/rain_aesthetic_scene1.png",
+      "style_samples/rain_aesthetic_scene2.png"
+    ]
+  },
+  {
+    "style": "Coffee Shop",
+    "normalized": "coffee_shop",
+    "generated": 2,
+    "files": [
+      "style_samples/coffee_shop_scene1.png",
+      "style_samples/coffee_shop_scene2.png"
+    ]
+  },
+  {
+    "style": "Library Study",
+    "normalized": "library_study",
+    "generated": 2,
+    "files": [
+      "style_samples/library_study_scene1.png",
+      "style_samples/library_study_scene2.png"
+    ]
+  },
+  {
+    "style": "Meditation Space",
+    "normalized": "meditation_space",
+    "generated": 2,
+    "files": [
+      "style_samples/meditation_space_scene1.png",
+      "style_samples/meditation_space_scene2.png"
+    ]
+  },
+  {
+    "style": "Zen Garden",
+    "normalized": "zen_garden",
+    "generated": 2,
+    "files": [
+      "style_samples/zen_garden_scene1.png",
+      "style_samples/zen_garden_scene2.png"
+    ]
+  },
+  {
+    "style": "Minimalist Room",
+    "normalized": "minimalist_room",
+    "generated": 2,
+    "files": [
+      "style_samples/minimalist_room_scene1.png",
+      "style_samples/minimalist_room_scene2.png"
+    ]
+  }
+]
