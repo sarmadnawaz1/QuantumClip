@@ -59,6 +59,9 @@ backend/uploads/**/*
 *.avi
 *.mov
 *.mkv
+# Allow overlay files
+!backend/overlays/*.mp4
+!backend/overlays/*.MP4
 # Keep small audio files for music
 # backend/music/*.mp3
 # backend/music/*.MP3
